@@ -15,6 +15,9 @@
 		AA5980962A4FC0DB0053FF48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5980952A4FC0DB0053FF48 /* GoogleService-Info.plist */; };
 		AA59809A2A4FC1940053FF48 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5980992A4FC1940053FF48 /* AuthService.swift */; };
 		AA59809C2A4FC2630053FF48 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA59809B2A4FC2630053FF48 /* StartViewModel.swift */; };
+		AA59809E2A4FC4080053FF48 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA59809D2A4FC4080053FF48 /* Score.swift */; };
+		AA5980A02A4FC5180053FF48 /* IconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA59809F2A4FC5180053FF48 /* IconType.swift */; };
+		AA5980A22A4FC59B0053FF48 /* ScoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5980A12A4FC59B0053FF48 /* ScoreService.swift */; };
 		AA69297A2A4FAC1D000CC3E8 /* TouchTheNumbersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6929792A4FAC1D000CC3E8 /* TouchTheNumbersApp.swift */; };
 		AA69297C2A4FAC1D000CC3E8 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA69297B2A4FAC1D000CC3E8 /* PlayView.swift */; };
 		AA69297E2A4FAC1E000CC3E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA69297D2A4FAC1E000CC3E8 /* Assets.xcassets */; };
@@ -29,6 +32,9 @@
 		AA5980952A4FC0DB0053FF48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA5980992A4FC1940053FF48 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		AA59809B2A4FC2630053FF48 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		AA59809D2A4FC4080053FF48 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		AA59809F2A4FC5180053FF48 /* IconType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconType.swift; sourceTree = "<group>"; };
+		AA5980A12A4FC59B0053FF48 /* ScoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreService.swift; sourceTree = "<group>"; };
 		AA6929762A4FAC1D000CC3E8 /* TouchTheNumbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchTheNumbers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6929792A4FAC1D000CC3E8 /* TouchTheNumbersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchTheNumbersApp.swift; sourceTree = "<group>"; };
 		AA69297B2A4FAC1D000CC3E8 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
@@ -60,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				AA5980992A4FC1940053FF48 /* AuthService.swift */,
+				AA5980A12A4FC59B0053FF48 /* ScoreService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -107,6 +114,8 @@
 			children = (
 				AA6929882A4FAEB7000CC3E8 /* NumberModel.swift */,
 				AA69298C2A4FB988000CC3E8 /* Level.swift */,
+				AA59809D2A4FC4080053FF48 /* Score.swift */,
+				AA59809F2A4FC5180053FF48 /* IconType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,11 +230,14 @@
 			files = (
 				AA69298B2A4FB244000CC3E8 /* PlayViewModel.swift in Sources */,
 				AA59809C2A4FC2630053FF48 /* StartViewModel.swift in Sources */,
+				AA5980A22A4FC59B0053FF48 /* ScoreService.swift in Sources */,
 				AA69297C2A4FAC1D000CC3E8 /* PlayView.swift in Sources */,
 				AA69297A2A4FAC1D000CC3E8 /* TouchTheNumbersApp.swift in Sources */,
+				AA5980A02A4FC5180053FF48 /* IconType.swift in Sources */,
 				AA6929922A4FB9C5000CC3E8 /* StartView.swift in Sources */,
 				AA69298D2A4FB988000CC3E8 /* Level.swift in Sources */,
 				AA6929892A4FAEB7000CC3E8 /* NumberModel.swift in Sources */,
+				AA59809E2A4FC4080053FF48 /* Score.swift in Sources */,
 				AA59809A2A4FC1940053FF48 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

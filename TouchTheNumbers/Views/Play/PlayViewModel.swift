@@ -7,10 +7,14 @@ class PlayViewModel: ObservableObject {
   @Published var endTime: Date?
   @Published var finished: Bool = false
 
-  var selectedLevel: Level
+  private let scoreService: ScoreService = .shared
 
-  init(selectedLevel: Level) {
+  var selectedLevel: Level
+  let oldScore: Score?
+
+  init(selectedLevel: Level, oldScore: Score?) {
     self.selectedLevel = selectedLevel
+    self.oldScore = oldScore
   }
 
   func onAppear() {
@@ -51,6 +55,29 @@ class PlayViewModel: ObservableObject {
     }
   }
 
+  func uploadScoreButton() async {
+    guard let time = getDuration() else { return }
+
+    if let oldScore {
+      if oldScore.time > time {
+        do {
+          var score = oldScore
+          score.time = time
+          try await scoreService.updateScore(score)
+        } catch {
+          print(error.localizedDescription)
+        }
+      }
+    } else {
+      do {
+        let score: Score = .init(iconType: .man, level: selectedLevel, time: time)
+        try await scoreService.uploadScore(score)
+      } catch {
+        print(error.localizedDescription)
+      }
+    }
+  }
+
   func convertDate() -> String? {
     guard let startTime, let endTime else { return nil }
     let time = endTime.timeIntervalSince(startTime)
@@ -61,5 +88,10 @@ class PlayViewModel: ObservableObject {
     dateFormatter.allowedUnits = [.hour, .minute, .second, .nanosecond]
 
     return dateFormatter.string(from: time)
+  }
+
+  func getDuration() -> Double? {
+    guard let startTime, let endTime else { return nil }
+    return endTime.timeIntervalSince(startTime)
   }
 }

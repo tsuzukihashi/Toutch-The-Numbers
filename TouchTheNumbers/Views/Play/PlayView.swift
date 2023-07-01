@@ -58,10 +58,16 @@ struct PlayView: View {
       .animation(.easeInOut, value: viewModel.numbers)
       .safeAreaInset(edge: .bottom) {
 
+
         Button {
+          if viewModel.finished {
+            Task {
+              await viewModel.uploadScoreButton()
+            }
+          }
           dismiss()
         } label: {
-          Text("CLOSE")
+          Text(viewModel.finished ? "DONE" : "CLOSE")
         }
         .buttonStyle(.borderedProminent)
       }
@@ -70,5 +76,5 @@ struct PlayView: View {
 }
 
 #Preview {
-  PlayView(viewModel: .init(selectedLevel: .easy))
+  PlayView(viewModel: .init(selectedLevel: .easy, oldScore: nil))
 }
