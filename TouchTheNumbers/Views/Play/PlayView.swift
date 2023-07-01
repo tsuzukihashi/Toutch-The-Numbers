@@ -34,7 +34,7 @@ struct PlayView: View {
             RoundedRectangle(cornerRadius: 8)
               .foregroundColor((viewModel.getTargetNumber(num: num)?.isSelected == true) ? .secondary : .red)
             Text("\(num.display)")
-              .font(.title)
+              .font(viewModel.selectedLevel == .extra ? .headline : .title)
               .bold()
               .foregroundColor(.white)
           }
@@ -67,10 +67,11 @@ struct PlayView: View {
           dismiss()
         } label: {
           Text(viewModel.finished ? "DONE" : "CLOSE")
-            .font(.caprasimo(size: 44))
+            .font(.caprasimo(size: 32))
             .padding()
         }
         .buttonStyle(.borderedProminent)
+        .padding(.bottom, 4)
       }
     }
   }

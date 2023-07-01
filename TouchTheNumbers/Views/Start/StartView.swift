@@ -8,7 +8,7 @@ struct StartView: View {
   @StateObject var viewModel: StartViewModel = .init()
 
   var body: some View {
-    VStack(spacing: 64) {
+    VStack(spacing: 32) {
       VStack {
         Text("Toutch\nThe Numbers")
           .font(.caprasimo(size: 48))
@@ -54,7 +54,6 @@ struct StartView: View {
           .padding(.horizontal, 32)
         }
       }
-      Spacer()
     }
     .padding(.vertical, 32)
     .safeAreaInset(edge: .bottom, content: {
