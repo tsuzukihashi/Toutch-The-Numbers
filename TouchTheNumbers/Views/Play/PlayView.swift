@@ -51,14 +51,13 @@ struct PlayView: View {
       VStack {
         header()
         main(proxy: proxy)
+        Spacer()
       }
       .onAppear {
         viewModel.onAppear()
       }
       .animation(.easeInOut, value: viewModel.numbers)
       .safeAreaInset(edge: .bottom) {
-
-
         Button {
           if viewModel.finished {
             Task {
@@ -68,6 +67,8 @@ struct PlayView: View {
           dismiss()
         } label: {
           Text(viewModel.finished ? "DONE" : "CLOSE")
+            .font(.caprasimo(size: 44))
+            .padding()
         }
         .buttonStyle(.borderedProminent)
       }

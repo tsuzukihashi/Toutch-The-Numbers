@@ -9,14 +9,25 @@ struct StartView: View {
 
   var body: some View {
     VStack(spacing: 64) {
-      Text("Toutch\nThe Numbers")
-        .font(.caprasimo(size: 48))
-        .multilineTextAlignment(.center)
-        .bold()
-
       VStack {
+        Text("Toutch\nThe Numbers")
+          .font(.caprasimo(size: 48))
+          .multilineTextAlignment(.center)
+          .bold()
+
+        HStack {
+          Text("ID:")
+          if let uid = viewModel.userID {
+            Text(uid.prefix(6))
+          }
+        }
+        .font(.caption)
+        .foregroundColor(.secondary)
+      }
+
+      VStack(spacing: 16) {
         ForEach(Level.allCases) { level in
-          VStack(alignment: .leading) {
+          VStack(alignment: .center, spacing: 4) {
             Button(action: {
               selectedLevel = level
               showPlayView = true
@@ -25,32 +36,37 @@ struct StartView: View {
                 .frame(maxWidth: .infinity)
                 .bold()
                 .font(.headline)
+                .padding(8)
             })
             .buttonStyle(.borderedProminent)
             .tint(level.color)
 
             HStack {
-              Text("High Score: ")
+              Text("HighScore:")
               if let score = viewModel.scores.first(where: { $0.level == level }) {
                 Text(String(format: "%.4f", score.time))
               } else {
                 Text("???")
               }
             }
+            .foregroundColor(.secondary)
           }
           .padding(.horizontal, 32)
         }
       }
+      Spacer()
     }
+    .padding(.vertical, 32)
     .safeAreaInset(edge: .bottom, content: {
       Button(action: {
         showRankingView = true
       }, label: {
-        Text("Ranking")
+        Label("Ranking", systemImage: "medal")
           .font(.title)
           .fontWeight(.bold)
       })
       .buttonStyle(.borderedProminent)
+      .tint(.black)
     })
     .fullScreenCover(item: $selectedLevel, onDismiss: {
       Task {
