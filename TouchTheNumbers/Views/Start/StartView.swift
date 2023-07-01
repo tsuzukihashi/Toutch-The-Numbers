@@ -4,6 +4,8 @@ struct StartView: View {
   @State var showPlayView: Bool = false
   @State var selectedLevel: Level?
 
+  @StateObject var viewModel: StartViewModel = .init()
+
   var body: some View {
     VStack(spacing: 32) {
       Text("Toutch The Numbers")
@@ -29,6 +31,9 @@ struct StartView: View {
     .fullScreenCover(item: $selectedLevel, content: { level in
       PlayView(viewModel: .init(selectedLevel: level))
     })
+    .task {
+      await viewModel.onAppear()
+    }
   }
 }
 
