@@ -82,8 +82,8 @@ struct StartView: View {
     }
   }
 }
-
-@available(iOS 17.0, *)
-#Preview {
-  StartView()
-}
+//
+//@available(iOS 17.0, *)
+//#Preview {
+//  StartView()
+//}

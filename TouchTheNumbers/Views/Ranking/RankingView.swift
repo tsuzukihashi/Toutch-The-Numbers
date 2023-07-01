@@ -90,8 +90,8 @@ struct RankingView: View {
     }
   }
 }
-
-@available(iOS 17.0, *)
-#Preview {
-  RankingView()
-}
+//
+//@available(iOS 17.0, *)
+//#Preview {
+//  RankingView()
+//}

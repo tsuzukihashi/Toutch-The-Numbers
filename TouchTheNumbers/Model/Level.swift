@@ -27,39 +27,39 @@ enum Level: String, CaseIterable, Identifiable, Codable {
   var maxNum: Int {
     switch self {
     case .easy:
-      9
+      return 9
     case .normal:
-      16
+      return 16
     case .hard:
-      25
+      return 25
     case .extra:
-      49
+      return 49
     }
   }
 
   var row: Int {
     switch self {
     case .easy:
-      3
+      return 3
     case .normal:
-      4
+      return 4
     case .hard:
-      5
+      return 5
     case .extra:
-      7
+      return 7
     }
   }
 
   var widthPercent: CGFloat {
     switch self {
     case .easy:
-      0.3
+      return 0.3
     case .normal:
-      0.2
+      return 0.2
     case .hard:
-      0.15
+      return 0.15
     case .extra:
-      0.1
+      return 0.1
     }
   }
 
