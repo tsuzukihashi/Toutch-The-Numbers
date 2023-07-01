@@ -70,7 +70,7 @@ class PlayViewModel: ObservableObject {
       }
     } else {
       do {
-        let score: Score = .init(iconType: .man, level: selectedLevel, time: time)
+        let score: Score = .init(iconType: .random(), level: selectedLevel, time: time)
         try await scoreService.uploadScore(score)
       } catch {
         print(error.localizedDescription)

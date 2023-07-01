@@ -18,6 +18,10 @@
 		AA59809E2A4FC4080053FF48 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA59809D2A4FC4080053FF48 /* Score.swift */; };
 		AA5980A02A4FC5180053FF48 /* IconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA59809F2A4FC5180053FF48 /* IconType.swift */; };
 		AA5980A22A4FC59B0053FF48 /* ScoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5980A12A4FC59B0053FF48 /* ScoreService.swift */; };
+		AA5980A52A4FD5B10053FF48 /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5980A42A4FD5B10053FF48 /* RankingViewModel.swift */; };
+		AA5980A82A4FD5BD0053FF48 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5980A72A4FD5BD0053FF48 /* RankingView.swift */; };
+		AA5980AA2A4FDE910053FF48 /* Caprasimo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA5980A92A4FDE910053FF48 /* Caprasimo-Regular.ttf */; };
+		AA5980AE2A4FDEDA0053FF48 /* FontExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5980AD2A4FDEDA0053FF48 /* FontExt.swift */; };
 		AA69297A2A4FAC1D000CC3E8 /* TouchTheNumbersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6929792A4FAC1D000CC3E8 /* TouchTheNumbersApp.swift */; };
 		AA69297C2A4FAC1D000CC3E8 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA69297B2A4FAC1D000CC3E8 /* PlayView.swift */; };
 		AA69297E2A4FAC1E000CC3E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA69297D2A4FAC1E000CC3E8 /* Assets.xcassets */; };
@@ -35,6 +39,11 @@
 		AA59809D2A4FC4080053FF48 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		AA59809F2A4FC5180053FF48 /* IconType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconType.swift; sourceTree = "<group>"; };
 		AA5980A12A4FC59B0053FF48 /* ScoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreService.swift; sourceTree = "<group>"; };
+		AA5980A42A4FD5B10053FF48 /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
+		AA5980A72A4FD5BD0053FF48 /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
+		AA5980A92A4FDE910053FF48 /* Caprasimo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Caprasimo-Regular.ttf"; sourceTree = "<group>"; };
+		AA5980AB2A4FDEAF0053FF48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AA5980AD2A4FDEDA0053FF48 /* FontExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExt.swift; sourceTree = "<group>"; };
 		AA6929762A4FAC1D000CC3E8 /* TouchTheNumbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchTheNumbers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6929792A4FAC1D000CC3E8 /* TouchTheNumbersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchTheNumbersApp.swift; sourceTree = "<group>"; };
 		AA69297B2A4FAC1D000CC3E8 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
@@ -71,6 +80,23 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		AA5980A32A4FD5A90053FF48 /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				AA5980A42A4FD5B10053FF48 /* RankingViewModel.swift */,
+				AA5980A72A4FD5BD0053FF48 /* RankingView.swift */,
+			);
+			path = Ranking;
+			sourceTree = "<group>";
+		};
+		AA5980AC2A4FDED20053FF48 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AA5980AD2A4FDEDA0053FF48 /* FontExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AA69296D2A4FAC1D000CC3E8 = {
 			isa = PBXGroup;
 			children = (
@@ -90,12 +116,15 @@
 		AA6929782A4FAC1D000CC3E8 /* TouchTheNumbers */ = {
 			isa = PBXGroup;
 			children = (
+				AA5980AB2A4FDEAF0053FF48 /* Info.plist */,
 				AA6929792A4FAC1D000CC3E8 /* TouchTheNumbersApp.swift */,
+				AA5980AC2A4FDED20053FF48 /* Extensions */,
 				AA5980982A4FC1870053FF48 /* Service */,
 				AA6929872A4FAEA7000CC3E8 /* Model */,
 				AA69298E2A4FB9A4000CC3E8 /* Views */,
 				AA69297D2A4FAC1E000CC3E8 /* Assets.xcassets */,
 				AA5980952A4FC0DB0053FF48 /* GoogleService-Info.plist */,
+				AA5980A92A4FDE910053FF48 /* Caprasimo-Regular.ttf */,
 				AA69297F2A4FAC1E000CC3E8 /* Preview Content */,
 			);
 			path = TouchTheNumbers;
@@ -123,6 +152,7 @@
 		AA69298E2A4FB9A4000CC3E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AA5980A32A4FD5A90053FF48 /* Ranking */,
 				AA6929902A4FB9BD000CC3E8 /* Start */,
 				AA69298F2A4FB9B3000CC3E8 /* Play */,
 			);
@@ -218,6 +248,7 @@
 				AA6929812A4FAC1E000CC3E8 /* Preview Assets.xcassets in Resources */,
 				AA69297E2A4FAC1E000CC3E8 /* Assets.xcassets in Resources */,
 				AA5980962A4FC0DB0053FF48 /* GoogleService-Info.plist in Resources */,
+				AA5980AA2A4FDE910053FF48 /* Caprasimo-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,11 +265,14 @@
 				AA69297C2A4FAC1D000CC3E8 /* PlayView.swift in Sources */,
 				AA69297A2A4FAC1D000CC3E8 /* TouchTheNumbersApp.swift in Sources */,
 				AA5980A02A4FC5180053FF48 /* IconType.swift in Sources */,
+				AA5980A82A4FD5BD0053FF48 /* RankingView.swift in Sources */,
 				AA6929922A4FB9C5000CC3E8 /* StartView.swift in Sources */,
 				AA69298D2A4FB988000CC3E8 /* Level.swift in Sources */,
 				AA6929892A4FAEB7000CC3E8 /* NumberModel.swift in Sources */,
 				AA59809E2A4FC4080053FF48 /* Score.swift in Sources */,
 				AA59809A2A4FC1940053FF48 /* AuthService.swift in Sources */,
+				AA5980AE2A4FDEDA0053FF48 /* FontExt.swift in Sources */,
+				AA5980A52A4FD5B10053FF48 /* RankingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -354,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -375,6 +409,7 @@
 				DEVELOPMENT_TEAM = A93B2TPWBT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TouchTheNumbers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -404,6 +439,7 @@
 				DEVELOPMENT_TEAM = A93B2TPWBT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TouchTheNumbers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

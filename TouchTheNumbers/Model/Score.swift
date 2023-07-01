@@ -3,7 +3,7 @@ import Foundation
 /**
  scores/{score_id}
  */
-struct Score: Codable {
+struct Score: Codable, Identifiable {
   var id: String
   var uid: String
   var iconType: IconType

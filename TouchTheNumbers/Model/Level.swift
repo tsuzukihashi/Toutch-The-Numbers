@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 enum Level: String, CaseIterable, Identifiable, Codable {
   case easy
@@ -19,7 +20,7 @@ enum Level: String, CaseIterable, Identifiable, Codable {
     case .hard:
       return "むずかしい"
     case .extra:
-      return "すごくむずかしい"
+      return "おに"
     }
   }
 
@@ -59,6 +60,19 @@ enum Level: String, CaseIterable, Identifiable, Codable {
       0.15
     case .extra:
       0.1
+    }
+  }
+
+  var color: Color {
+    switch self {
+    case .easy:
+      return .green
+    case .normal:
+      return .blue
+    case .hard:
+      return .purple
+    case .extra:
+      return .red
     }
   }
 }

@@ -10,6 +10,19 @@ actor ScoreService {
     self.firestore = Firestore.firestore()
   }
 
+  func fetchScores(level: Level) async throws -> [Score] {
+    do {
+      return try await firestore.collection("scores")
+        .whereField("level", isEqualTo: level.rawValue)
+        .order(by: "time", descending: false)
+        .getDocuments()
+        .documents
+        .compactMap { try $0.data(as: Score.self) }
+    } catch {
+      throw error
+    }
+  }
+
   func fetchMyScores() async throws -> [Score] {
     guard let uid = await authService.uid else { return [] }
     do {

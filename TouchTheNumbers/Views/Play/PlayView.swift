@@ -75,6 +75,7 @@ struct PlayView: View {
   }
 }
 
+@available(iOS 17.0, *)
 #Preview {
   PlayView(viewModel: .init(selectedLevel: .easy, oldScore: nil))
 }
