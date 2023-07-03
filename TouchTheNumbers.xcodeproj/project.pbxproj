@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA1E41FF2A52E6520029BA68 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = AA1E41FE2A52E6520029BA68 /* GoogleMobileAds */; };
 		AA59808C2A4FC0C30053FF48 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AA59808B2A4FC0C30053FF48 /* FirebaseAnalytics */; };
 		AA59808E2A4FC0C30053FF48 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AA59808D2A4FC0C30053FF48 /* FirebaseAuth */; };
 		AA5980902A4FC0C30053FF48 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = AA59808F2A4FC0C30053FF48 /* FirebaseCrashlytics */; };
@@ -60,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA1E41FF2A52E6520029BA68 /* GoogleMobileAds in Frameworks */,
 				AA5980942A4FC0C30053FF48 /* FirebaseFirestoreSwift in Frameworks */,
 				AA5980902A4FC0C30053FF48 /* FirebaseCrashlytics in Frameworks */,
 				AA5980922A4FC0C30053FF48 /* FirebaseFirestore in Frameworks */,
@@ -199,6 +201,7 @@
 				AA59808F2A4FC0C30053FF48 /* FirebaseCrashlytics */,
 				AA5980912A4FC0C30053FF48 /* FirebaseFirestore */,
 				AA5980932A4FC0C30053FF48 /* FirebaseFirestoreSwift */,
+				AA1E41FE2A52E6520029BA68 /* GoogleMobileAds */,
 			);
 			productName = TouchTheNumbers;
 			productReference = AA6929762A4FAC1D000CC3E8 /* TouchTheNumbers.app */;
@@ -230,6 +233,7 @@
 			mainGroup = AA69296D2A4FAC1D000CC3E8;
 			packageReferences = (
 				AA59808A2A4FC0C30053FF48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				AA1E41FD2A52E6520029BA68 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = AA6929772A4FAC1D000CC3E8 /* Products */;
 			projectDirPath = "";
@@ -412,6 +416,7 @@
 				INFOPLIST_FILE = TouchTheNumbers/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Touch Number";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "広告効果計測や広告の最適化のために利用します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -444,6 +449,7 @@
 				INFOPLIST_FILE = TouchTheNumbers/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Touch Number";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "広告効果計測や広告の最適化のために利用します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -486,6 +492,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AA1E41FD2A52E6520029BA68 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.0;
+			};
+		};
 		AA59808A2A4FC0C30053FF48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -497,6 +511,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AA1E41FE2A52E6520029BA68 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA1E41FD2A52E6520029BA68 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
 		AA59808B2A4FC0C30053FF48 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AA59808A2A4FC0C30053FF48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

@@ -1,5 +1,6 @@
 import SwiftUI
 import FirebaseCore
+import AppTrackingTransparency
 
 @main
 struct TouchTheNumbersApp: App {
@@ -10,6 +11,11 @@ struct TouchTheNumbersApp: App {
   var body: some Scene {
     WindowGroup {
       StartView()
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+          ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+
+          })
+        }
     }
   }
 }
